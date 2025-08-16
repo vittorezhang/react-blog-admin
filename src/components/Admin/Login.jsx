@@ -18,8 +18,8 @@ export default function Login() {
   return (
     <div className="login-wrap">
       <div className="login-wrap-bg" />
-      <div className="login-logo">
-        <img src="https://cdn.boblog.com/logo.png" alt="boblog" />
+          <div className="login-logo">          
+        <img src="http://imgs.vittoreblog.com/FgucVYzV_f0rbYCLszEOhuKz6dQI" alt="vittoreblog" />
       </div>
       <Form className="form-wrap" onFinish={handleSubmit}>
         <Form.Item name="email" rules={[{ required: true, message: '请输入邮箱' }]}>

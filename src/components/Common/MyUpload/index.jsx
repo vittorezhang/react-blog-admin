@@ -14,9 +14,9 @@ export default function MyUpload(props = {}) {
   // 配置密钥对
   // const accessKey = '41Od8VTHD0Xyiuu1U4h8GfjcwO7KPTKCglR7VYtq'
   // const secretKey = '3UNVMbHMJkv1EeQB123nxhTei23U6xkviSFwRD_t'
-  // 获取的token
+  // 获取的token 【有效期：默认当前时间 +3600s】TODO 后续调整在服务端获取
   const token =
-    '41Od8VTHD0Xyiuu1U4h8GfjcwO7KPTKCglR7VYtq:55zZ7hypCjD4n6hpqoP5WwSmx2A=:eyJzY29wZSI6InhnZy1ibG9nIiwiZGVhZGxpbmUiOjE3NTUyNTE1MTV9'
+    '41Od8VTHD0Xyiuu1U4h8GfjcwO7KPTKCglR7VYtq:-V9luXxsAg6_V3X9HQllFC6HdP0=:eyJzY29wZSI6InhnZy1ibG9nIiwiZGVhZGxpbmUiOjE3NTUzMTkwMzEsImRldGVjdE1pbWUiOjF9'
 
   // 上传props
   const uploadProps = {
