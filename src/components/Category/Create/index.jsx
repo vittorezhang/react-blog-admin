@@ -29,8 +29,7 @@ export default function CategoryCreate() {
         style={{ width: '50%' }}
         initialValues={{ sort_order: 1 }}
         onFinish={onSubmit}
-        autoComplete="off"
-      >
+        autoComplete="off">
         <Form.Item
           name="name"
           label="名称"
@@ -39,9 +38,19 @@ export default function CategoryCreate() {
               required: true,
               message: '请输入分类名称'
             }
-          ]}
-        >
+          ]}>
           <Input placeholder="请输入分类名称" />
+        </Form.Item>
+        <Form.Item
+          name="category_key"
+          label="分类key"
+          rules={[
+            {
+              required: true,
+              message: '请输入分类key'
+            }
+          ]}>
+          <Input placeholder="请输入分类key" />
         </Form.Item>
 
         <Form.Item
@@ -52,16 +61,14 @@ export default function CategoryCreate() {
               required: true,
               message: '请输入分类排序'
             }
-          ]}
-        >
+          ]}>
           <Input placeholder="请输入分类排序" />
         </Form.Item>
         <Form.Item
           wrapperCol={{
             offset: 8,
             span: 16
-          }}
-        >
+          }}>
           <Button style={{ marginRight: '12px' }} onClick={() => form.resetFields()}>
             重置
           </Button>

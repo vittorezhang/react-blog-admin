@@ -3,11 +3,20 @@ import { message, Upload } from 'antd'
 import { PictureOutlined } from '@ant-design/icons'
 import { useUploadToken } from '../../../request/api/upload'
 
-const UPLOAD_ADDRESS = 'https://upload-z2.qiniup.com/'
-const CDN_HOST = `https://cdn.boblog.com/`
+// const UPLOAD_ADDRESS = 'https://upload-z2.qiniup.com/'
+// const CDN_HOST = `https://cdn.boblog.com/`
+
+const UPLOAD_ADDRESS = 'http://upload-z2.qiniup.com/'
+const CDN_HOST = `http://imgs.vittoreblog.com/`
 
 export default function MyUpload(props = {}) {
-  const { data: token = '' } = useUploadToken()
+  //   const { data: token = '' } = useUploadToken()
+  // 配置密钥对
+  // const accessKey = '41Od8VTHD0Xyiuu1U4h8GfjcwO7KPTKCglR7VYtq'
+  // const secretKey = '3UNVMbHMJkv1EeQB123nxhTei23U6xkviSFwRD_t'
+  // 获取的token
+  const token =
+    '41Od8VTHD0Xyiuu1U4h8GfjcwO7KPTKCglR7VYtq:55zZ7hypCjD4n6hpqoP5WwSmx2A=:eyJzY29wZSI6InhnZy1ibG9nIiwiZGVhZGxpbmUiOjE3NTUyNTE1MTV9'
 
   // 上传props
   const uploadProps = {
@@ -43,7 +52,7 @@ export default function MyUpload(props = {}) {
   }
 
   return (
-    <Upload {...uploadProps} data={token}>
+    <Upload {...uploadProps} data={{ token }}>
       {props.children || <PictureOutlined color="#2d8cf0" />}
     </Upload>
   )

@@ -11,7 +11,7 @@
 - 状态管理 Redux Toolkit，React Query 管理服务端状态
 - 路由懒加载，减少打包体积
 - 搭建极简版 markdown 编辑器，轻量快捷，让写 md 更加清爽
-- Node.js 服务端 API 接口项目：[https://github.com/lfb/nodejs-koa-blog](https://github.com/lfb/nodejs-koa-blog)
+- Node.js 服务端 API 接口项目：[https://github.com/vittorezhang/nodejs-koa-blog](https://github.com/vittorezhang/nodejs-koa-blog)
 - 欢迎大家指导~
 
 ## 安装启动

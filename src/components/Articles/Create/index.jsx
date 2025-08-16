@@ -26,7 +26,9 @@ export default function ArticleCreate() {
     category_id: 0,
     content: '',
     description: '',
-    img_url: '',
+    // img_url: '',
+    img_url: 'https://case.vittoreblog.com/images/myAvatar.jpg',
+    article_path: '',
     seo_keyword: '',
     sort_order: 1,
     status: 1,
@@ -147,6 +149,28 @@ export default function ArticleCreate() {
         </Form.Item>
 
         <section style={{ display: 'flex' }}>
+        <Form.Item
+            name="article_path"
+            style={{ width: '30%', marginRight: '2%' }}
+            rules={[
+              {
+                required: true,
+                message: '请输入文章路径!'
+              }
+            ]}
+          >
+            <Input
+              value={params.article_path}
+              onChange={e => {
+                setParams({
+                  ...params,
+                  article_path: e.target.value
+                })
+              }}
+              allowClear
+              placeholder="文章路径"
+            />
+          </Form.Item>  
           <Form.Item
             name="seo_keyword"
             style={{ width: '30%', marginRight: '2%' }}
